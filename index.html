@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Math Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Simple Math Quiz</h1>
+
+        <div id="game-info">
+            <p>Score: <span id="score">0</span> / 10</p>
+            <p>Time Left: <span id="time-left">60</span>s</p>
+        </div>
+
+        <div id="game-area">
+            <p id="question">Press "Start Game" to begin!</p>
+            
+            <div id="options-container">
+                </div>
+
+            <p id="feedback"></p>
+        </div>
+
+        <div id="controls">
+            <button id="start-btn">Start Game</button>
+            <button id="reset-btn" disabled>Reset Game</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
