@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Beginner QuickMath — 60s Tap Answers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <main class="card">
+      <header>
+        <div class="logo">QM</div>
+        <div>
+          <h1>Beginner QuickMath</h1>
+          <p class="lead">Tap the correct answer • 60 seconds • Friendly questions</p>
+        </div>
+      </header>
+
+      <div class="game">
+        <div class="topbar">
+          <div class="pill">Time left: <strong id="timeLeft">60</strong>s</div>
+          <div style="flex:1;margin:0 12px">
+            <div class="progress-wrap"><div id="progress" class="progress"></div></div>
+          </div>
+          <div class="pill">Score: <strong id="score">0</strong></div>
+        </div>
+
+        <div class="question-box" aria-live="polite">
+          <div class="q-left">
+            <div class="q-what">Solve</div>
+            <div id="question" class="q-text">1 + 1</div>
+            <div class="meta">Operation: <span id="opLabel" style="margin-left:6px">Addition</span></div>
+          </div>
+          <div style="text-align:right">
+            <div class="small-muted">Rounds: <span id="roundsDone">0</span></div>
+            <div class="small-muted">High score: <span id="highScore">0</span></div>
+          </div>
+        </div>
+
+        <div class="answers" id="answers"></div>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button id="startBtn" class="small">Start / Restart</button>
+          <button id="exportBtn" class="ghost small">Export Result</button>
+        </div>
+
+        <div id="endPanel" style="display:none;margin-top:10px">
+          <div class="result" id="endText"></div>
+        </div>
+
+        <footer>Beginner mode: only small numbers and integer divisions. High score stored locally.</footer>
+      </div>
+    </main>
+
+    <aside class="card sidebar">
+      <div>
+        <div class="small-muted" style="margin-bottom:6px;font-weight:700">Settings</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <label class="small-muted">Operation
+            <select id="mode" class="input">
+              <option value="mixed">Mixed</option>
+              <option value="add">Addition only</option>
+              <option value="sub">Subtraction only</option>
+              <option value="mul">Multiplication only</option>
+              <option value="div">Division only</option>
+            </select>
+          </label>
+
+          <label class="small-muted">Rounds (informational)
+            <select id="roundCap" class="input">
+              <option value="30">30</option>
+              <option value="50" selected>50</option>
+              <option value="100">100</option>
+            </select>
+          </label>
+
+          <div class="small-muted">Lives: <span id="lives">3</span></div>
+
+          <div style="display:flex;gap:8px">
+            <button id="resetHigh" class="ghost small">Reset High</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="margin-top:12px" class="small-muted">How to play</div>
+        <ul class="small-muted" style="padding-left:18px;margin-top:6px">
+          <li>Press <strong>Start</strong>.</li>
+          <li>Tap the correct answer button within 60 seconds.</li>
+          <li>Score increases by 1 for each correct answer.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
